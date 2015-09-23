@@ -3,10 +3,10 @@
 
 bool Roster::addFighter(std::string info)
 {
-	smatch m;
-	regex data("([:w:])\s(A|C|R)\s(\d+)\s(\d+)\s(\d+)\s(\d+)");
+	std::smatch m;
+	std::regex data("([:w:])(A|C|R)(\\d+)(\\d+)(\\d+)(\\d+)");
 
-	bool found = regex_search(info, m, data);
+	bool found = std::regex_search(info, m, data);
 	if (found == true)
 	{
 		int i = 0;

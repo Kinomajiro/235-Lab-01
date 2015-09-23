@@ -3,10 +3,9 @@
 
 Robot::Robot(std::string fighter)
 {
-	smatch m;
-	regex info("([:w:])\s(A|C|R)\s(\d+)\s(\d+)\s(\d+)\s(\d+)");
-
-	bool found = regex_search(fighter, m, info);
+	std::smatch m;
+	std::regex info("([:w:])(A|C|R)(\\d+)(\\d+)(\\d+)(\\d+)");
+	std::regex_search(fighter, m, info);
 
 	name = m[0];
 	CLASS = m[1];

@@ -1,10 +1,10 @@
 #pragma once
 #include "Archer.h"
 
-Archer::Archer(string fighter)
+Archer::Archer(std::string fighter)
 {
 	std::smatch m;
-	std::regex info ("([:w:])\s(A|C|R)\s(\d+)\s(\d+)\s(\d+)\s(\d+)");
+	std::regex info ("([:w:])(A|C|R)(\\d+)(\\d+)(\\d+)(\\d+)");
 	std::regex_search(fighter, m, info);
 
 	name = m[0];
