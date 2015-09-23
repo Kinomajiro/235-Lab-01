@@ -8,7 +8,7 @@ class Archer : public FighterInterface
 {
 public:
 	//Constructor
-	Archer(std::string fighter, char Class, int hp, int str, int spd, int mgc);
+	Archer(std::string fighter, int hp, int str, int spd, int mgc);
 	~Archer();
 	string getName();
 	int getMaximumHP();

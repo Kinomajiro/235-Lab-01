@@ -1,9 +1,9 @@
 #include "Archer.h"
 
-Archer::Archer(std::string fighter, char Class, int hp, int str, int spd, int mgc)
+Archer::Archer(std::string fighter, int hp, int str, int spd, int mgc)
 {
 	name = fighter;
-	CLASS = Class;
+	CLASS = 'A';
 	HP = hp;
 	HPMax = hp;
 	STR = str;

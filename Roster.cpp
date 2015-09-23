@@ -16,19 +16,25 @@ bool Roster::addFighter(std::string info)
 		}
 		if(i == combatants.size())
 		{
+			std::string name = m[0];
+			int HP = m[2];
+			int STR = m[3];
+			int SPD = m[4];
+			int MGC = m[5];
+
 			if (m[1] == 'A')
 			{
-				Archer* fighter_pointer = new Archer(m[0], m[1], m[2], m[3], m[4], m[5]);
+				Archer* fighter_pointer = new Archer(name, HP, STR, SPD, MGC);
 				combatants.push_back(fighter_pointer);
 			}
 			else if (m[1] == 'C')
 			{
-				Cleric* fighter_pointer = new Cleric(m[0], m[1], m[2], m[3], m[4], m[5]);
+				Cleric* fighter_pointer = new Cleric(name, HP, STR, SPD, MGC);
 				combatants.push_back(fighter_pointer);
 			}
 			else
 			{
-				Robot* fighter_pointer = new Robot(m[0], m[1], m[2], m[3], m[4], m[5]);
+				Robot* fighter_pointer = new Robot(name, HP, STR, SPD, MGC);
 				combatants.push_back(fighter_pointer);
 			}
 		}

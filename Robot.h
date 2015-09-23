@@ -8,7 +8,7 @@ class Robot : public FighterInterface
 {
 public:
 	//Constructor
-	Robot(std::string fighter, char Class, int hp, int str, int spd, int mgc);
+	Robot(std::string fighter, int hp, int str, int spd, int mgc);
 	std::string getName();
 	int getMaximumHP();
 	int getCurrentHP();

@@ -1,9 +1,9 @@
 #include "Cleric.h"
 
-Cleric::Cleric(std::string fighter, char Class, int hp, int str, int spd, int mgc)
+Cleric::Cleric(std::string fighter, int hp, int str, int spd, int mgc)
 {
 	name = fighter;
-	CLASS = Class;
+	CLASS = 'C';
 	HP = hp;
 	HPMax = hp;
 	STR = str;

@@ -1,9 +1,9 @@
 #include "Robot.h"
 
-Robot::Robot(std::string fighter, char Class, int hp, int str, int spd, int mgc)
+Robot::Robot(std::string fighter, int hp, int str, int spd, int mgc)
 {
 	name = fighter;
-	CLASS = Class;
+	CLASS = 'R';
 	HP = hp;
 	HPMax = hp;
 	STR = str;

@@ -8,7 +8,7 @@ class Cleric : public FighterInterface
 {
 public:
 	//Constructor
-	Cleric(std::string fighter, char Class, int hp, int str, int spd, int mgc);
+	Cleric(std::string fighter, int hp, int str, int spd, int mgc);
 	std::string getName();
 	int getMaximumHP();
 	int getCurrentHP();
