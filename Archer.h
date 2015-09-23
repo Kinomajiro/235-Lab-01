@@ -2,14 +2,13 @@
 #include <string>
 #include <iostream>
 #include <vector>
-#include <regex>
 #include "FighterInterface.h"
 
 class Archer : public FighterInterface
 {
 public:
 	//Constructor
-	Archer(string fighter);
+	Archer(std::string fighter, char Class, int hp, int str, int spd, int mgc);
 	~Archer();
 	string getName();
 	int getMaximumHP();

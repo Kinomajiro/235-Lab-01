@@ -1,21 +1,16 @@
-#pragma once
 #include "Cleric.h"
 
-Cleric::Cleric(std::string fighter)
+Cleric::Cleric(std::string fighter, char Class, int hp, int str, int spd, int mgc)
 {
-	std::smatch m;
-	std::regex info("([:w:])(A|C|R)(\\d+)(\\d+)(\\d+)(\\d+)");
-	std::regex_search (fighter,m,info);
-
-	name = m[0];
-	CLASS = m[1];
-	HP = m[2];
-	HPMax = m[2];
-	STR = m[3];
-	SPD = m[4];
-	MGC = m[5];
-	DMG = m[5];
-	Mana = m[5] * 5;
+	name = fighter;
+	CLASS = Class;
+	HP = hp;
+	HPMax = hp;
+	STR = str;
+	SPD = spd
+	MGC = mgc;
+	DMG = mgc;
+	Mana = mgc * 5;
 }
 
 std::string Cleric::getName()

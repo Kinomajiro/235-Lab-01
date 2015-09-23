@@ -5,8 +5,8 @@ bool Roster::addFighter(std::string info)
 {
 	std::smatch m;
 	std::regex data("([:w:])(A|C|R)(\\d+)(\\d+)(\\d+)(\\d+)");
-
 	bool found = std::regex_search(info, m, data);
+
 	if (found == true)
 	{
 		int i = 0;
@@ -18,17 +18,17 @@ bool Roster::addFighter(std::string info)
 		{
 			if (m[1] == 'A')
 			{
-				Archer* fighter_pointer = new Archer(info);
+				Archer* fighter_pointer = new Archer(m[0], m[1], m[2], m[3], m[4], m[5]);
 				combatants.push_back(fighter_pointer);
 			}
 			else if (m[1] == 'C')
 			{
-				Cleric* fighter_pointer = new Cleric(info);
+				Cleric* fighter_pointer = new Cleric(m[0], m[1], m[2], m[3], m[4], m[5]);
 				combatants.push_back(fighter_pointer);
 			}
 			else
 			{
-				Robot* fighter_pointer = new Robot(info);
+				Robot* fighter_pointer = new Robot(m[0], m[1], m[2], m[3], m[4], m[5]);
 				combatants.push_back(fighter_pointer);
 			}
 		}
