@@ -7,7 +7,7 @@ Cleric::Cleric(std::string fighter, char Class, int hp, int str, int spd, int mg
 	HP = hp;
 	HPMax = hp;
 	STR = str;
-	SPD = spd
+	SPD = spd;
 	MGC = mgc;
 	DMG = mgc;
 	Mana = mgc * 5;
