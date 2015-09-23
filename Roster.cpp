@@ -1,4 +1,3 @@
-#pragma once
 #include "Roster.h"
 
 bool Roster::addFighter(std::string info)
@@ -17,17 +16,22 @@ bool Roster::addFighter(std::string info)
 		if(i == combatants.size())
 		{
 			std::string name = m[0];
-			int HP = m[2];
-			int STR = m[3];
-			int SPD = m[4];
-			int MGC = m[5];
 
-			if (m[1] == 'A')
+			std::string myString = m[2];
+			int HP = atoi(myString.c_str());
+			myString = m[3];
+			int STR = atoi(myString.c_str());
+			myString = m[4];
+			int SPD = atoi(myString.c_str());
+			myString = m[5];
+			int MGC = atoi(myString.c_str());
+
+			if (m[1] == "A")
 			{
 				Archer* fighter_pointer = new Archer(name, HP, STR, SPD, MGC);
 				combatants.push_back(fighter_pointer);
 			}
-			else if (m[1] == 'C')
+			else if (m[1] == "C")
 			{
 				Cleric* fighter_pointer = new Cleric(name, HP, STR, SPD, MGC);
 				combatants.push_back(fighter_pointer);
